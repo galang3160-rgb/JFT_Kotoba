@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanji Learning — Menu Utama</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animasi Background Ambient Glow -->
+  <div class="bg-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <!-- Watermark Kanji Hiasan -->
+  <div class="stamp" aria-hidden="true">漢</div>
+
+  <!-- Header / Navbar Sederhana -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../PART 1/index.html" class="brand">
+        <span class="brand-mark">漢字</span>
+        <div class="brand-text">
+          <span class="brand-title">Kanji Learning</span>
+          <span class="brand-sub">Persiapan JFT & JLPT</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="#materi" class="nav-link">Pilih Part</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- Hero / Lead Section -->
+    <section class="hero">
+      <span class="badge">漢字 Learning Hub</span>
+      <h1 class="hero-title">Belajar Kanji<br><span class="highlight">Lebih Mudah & Terstruktur.</span></h1>
+      <p class="hero-sub">Pilih bagian (PART) belajar di bawah ini untuk mulai melatih hafalan dan pemahaman kanji kamu.</p>
+      <div class="hero-action">
+        <a href="../PART 1/index.html" class="btn btn-primary">Mulai Belajar PART 1 →</a>
+      </div>
+    </section>
+
+    <!-- Section Part / Materi Belajar -->
+    <section class="section-block" id="materi">
+      <div class="section-head">
+        <span class="eyebrow">MODUL BELAJAR</span>
+        <h2 class="section-title">Pilih Part</h2>
+      </div>
+
+      <div class="part-grid">
+        
+        <!-- PART 01 CARD -->
+        <a class="part-card" href="../PART 1/index.html">
+          <div class="part-card-header">
+            <span class="part-index">PART 01</span>
+            <span class="part-level">N5</span>
+          </div>
+          <h3 class="part-title">Mriang 1</h3>
+          <p class="part-desc">Kanji JFT バス</p>
+          <div class="part-footer">
+            <span class="part-cta">Mulai Belajar <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <!-- PART 02 CARD -->
+        <a class="part-card" href="../PART 2/index.html">
+          <div class="part-card-header">
+            <span class="part-index">PART 02</span>
+            <span class="part-level">N5</span>
+          </div>
+          <h3 class="part-title">Mriang 2</h3>
+          <p class="part-desc">Kanji JFT バス</p>
+          <div class="part-footer">
+            <span class="part-cta">Mulai Belajar <span class="arrow">→</span></span>
+          </div>
+        </a>
+
+        <!-- PART 03 CARD -->
+        <a class="part-card" href="../PART 3/index.html">
+          <div class="part-card-header">
+            <span class="part-index">PART 03</span>
+            <span class="part-level">N5</span>
+          </div>
+          <h3 class="part-title">Mriang 3</h3>
+          <p class="part-desc">Kanji JFT バス</p>
+          <div class="part-footer">
+            <span class="part-cta">Mulai Belajar <span class="arrow">→</span></span>
+          </div>
+        </a>
+        <!-- =========================================================
+             TAMBAHKAN PART BARU DI SINI
+             
+             Salin struktur .part-card di atas jika ingin membuat 
+             PART 2, PART 3, dst.
+             
+             Contoh Template PART 02:
+             <a class="part-card" href="PART 2/index.html">
+               <div class="part-card-header">
+                 <span class="part-index">PART 02</span>
+                 <span class="part-level">N5</span>
+               </div>
+               <h3 class="part-title">Kehidupan Sehari-hari</h3>
+               <p class="part-desc">Kanji aktivitas, makan-minum, dan fasilitas umum.</p>
+               <div class="part-footer">
+                 <span class="part-cta">Mulai Belajar <span class="arrow">→</span></span>
+               </div>
+             </a>
+        ========================================================= -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Minimalis -->
+  <footer class="site-footer">
+    <p>Kanji Learning · Dibuat untuk latihan mandiri</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

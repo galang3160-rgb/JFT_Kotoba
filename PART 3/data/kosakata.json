@@ -1,0 +1,242 @@
+[
+  {
+    "kanji": "曇り",
+    "furigana": "くもり",
+    "romaji": "kumori",
+    "arti": "Mendung"
+  },
+  {
+    "kanji": "紹介",
+    "furigana": "しょうかい",
+    "romaji": "shoukai",
+    "arti": "Perkenalan, memperkenalkan"
+  },
+  {
+    "kanji": "自己紹介",
+    "furigana": "じこしょうかい",
+    "romaji": "jikoshoukai",
+    "arti": "Perkenalan diri"
+  },
+  {
+    "kanji": "かみ",
+    "furigana": "かみ",
+    "romaji": "kami",
+    "arti": "Kertas"
+  },
+  {
+    "kanji": "試験",
+    "furigana": "しけん",
+    "romaji": "shiken",
+    "arti": "Ujian"
+  },
+  {
+    "kanji": "高い",
+    "furigana": "たかい",
+    "romaji": "takai",
+    "arti": "Tinggi, mahal"
+  },
+  {
+    "kanji": "低い",
+    "furigana": "ひくい",
+    "romaji": "hikui",
+    "arti": "Rendah"
+  },
+  {
+    "kanji": "幸せ",
+    "furigana": "しあわせ",
+    "romaji": "shiawase",
+    "arti": "Bahagia"
+  },
+  {
+    "kanji": "教室",
+    "furigana": "きょうしつ",
+    "romaji": "kyoushitsu",
+    "arti": "Ruang kelas"
+  },
+  {
+    "kanji": "会議",
+    "furigana": "かいぎ",
+    "romaji": "kaigi",
+    "arti": "Rapat"
+  },
+  {
+    "kanji": "だいぶ",
+    "furigana": "だいぶ",
+    "romaji": "daibu",
+    "arti": "Lumayan, cukup banyak"
+  },
+  {
+    "kanji": "ちょっと",
+    "furigana": "ちょっと",
+    "romaji": "chotto",
+    "arti": "Sebentar, sedikit"
+  },
+  {
+    "kanji": "おまたせ",
+    "furigana": "おまたせ",
+    "romaji": "omatase",
+    "arti": "Maaf membuat menunggu"
+  },
+  {
+    "kanji": "さきに",
+    "furigana": "さきに",
+    "romaji": "sakini",
+    "arti": "Lebih dulu"
+  },
+  {
+    "kanji": "ありがとう",
+    "furigana": "ありがとう",
+    "romaji": "arigatou",
+    "arti": "Terima kasih"
+  },
+  {
+    "kanji": "はい、そうです",
+    "furigana": "はい、そうです",
+    "romaji": "hai, sou desu",
+    "arti": "Ya, benar"
+  },
+  {
+    "kanji": "どうぞ",
+    "furigana": "どうぞ",
+    "romaji": "douzo",
+    "arti": "Silakan"
+  },
+  {
+    "kanji": "ぜんぜん",
+    "furigana": "ぜんぜん",
+    "romaji": "zenzen",
+    "arti": "Sama sekali (tidak)"
+  },
+  {
+    "kanji": "とにかく",
+    "furigana": "とにかく",
+    "romaji": "tonikaku",
+    "arti": "Pokoknya, bagaimanapun juga"
+  },
+  {
+    "kanji": "やっぱり",
+    "furigana": "やっぱり",
+    "romaji": "yappari",
+    "arti": "Ternyata, memang"
+  },
+  {
+    "kanji": "もともと",
+    "furigana": "もともと",
+    "romaji": "motomoto",
+    "arti": "Awalnya, sejak semula"
+  },
+  {
+    "kanji": "お疲れさま",
+    "furigana": "おつかれさま",
+    "romaji": "otsukaresama",
+    "arti": "Terima kasih atas kerja kerasnya"
+  },
+  {
+    "kanji": "こちらこそ",
+    "furigana": "こちらこそ",
+    "romaji": "kochirakoso",
+    "arti": "Saya juga, justru saya yang berterima kasih"
+  },
+  {
+    "kanji": "あけましておめでとう",
+    "furigana": "あけましておめでとう",
+    "romaji": "akemashite omedetou",
+    "arti": "Selamat tahun baru"
+  },
+  {
+    "kanji": "どうですか",
+    "furigana": "どうですか",
+    "romaji": "dou desu ka",
+    "arti": "Bagaimana?"
+  },
+  {
+    "kanji": "どうやって",
+    "furigana": "どうやって",
+    "romaji": "dou yatte",
+    "arti": "Bagaimana caranya"
+  },
+  {
+    "kanji": "まだまだ",
+    "furigana": "まだまだ",
+    "romaji": "mada mada",
+    "arti": "Masih belum, masih jauh"
+  },
+  {
+    "kanji": "もちろん",
+    "furigana": "もちろん",
+    "romaji": "mochiron",
+    "arti": "Tentu saja"
+  },
+  {
+    "kanji": "最初",
+    "furigana": "さいしょ",
+    "romaji": "saisho",
+    "arti": "Pertama, awal"
+  },
+  {
+    "kanji": "頑張る",
+    "furigana": "がんばる",
+    "romaji": "ganbaru",
+    "arti": "Berusaha, berjuang"
+  },
+  {
+    "kanji": "大変",
+    "furigana": "たいへん",
+    "romaji": "taihen",
+    "arti": "Berat, sulit, melelahkan"
+  },
+  {
+    "kanji": "食事",
+    "furigana": "しょくじ",
+    "romaji": "shokuji",
+    "arti": "Makan, makanan"
+  },
+  {
+    "kanji": "旅行",
+    "furigana": "りょこう",
+    "romaji": "ryokou",
+    "arti": "Perjalanan, wisata"
+  },
+  {
+    "kanji": "興味",
+    "furigana": "きょうみ",
+    "romaji": "kyoumi",
+    "arti": "Minat, ketertarikan"
+  },
+  {
+    "kanji": "趣味",
+    "furigana": "しゅみ",
+    "romaji": "shumi",
+    "arti": "Hobi"
+  },
+  {
+    "kanji": "次",
+    "furigana": "つぎ",
+    "romaji": "tsugi",
+    "arti": "Berikutnya"
+  },
+  {
+    "kanji": "信号",
+    "furigana": "しんごう",
+    "romaji": "shingou",
+    "arti": "Lampu lalu lintas"
+  },
+  {
+    "kanji": "曲がる",
+    "furigana": "まがる",
+    "romaji": "magaru",
+    "arti": "Belok"
+  },
+  {
+    "kanji": "かゆい",
+    "furigana": "かゆい",
+    "romaji": "kayui",
+    "arti": "Gatal"
+  },
+  {
+    "kanji": "かるい",
+    "furigana": "かるい",
+    "romaji": "karui",
+    "arti": "Ringan"
+  }
+]

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PART 1 — Kanji & Kosakata Dasar</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animasi Background Glow -->
+  <div class="bg-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <!-- Watermark Kanji Hiasan -->
+  <div class="stamp" aria-hidden="true">一</div>
+
+  <!-- Header & Tab Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <a href="../index.html" class="btn-back" title="Kembali ke Menu Utama">←</a>
+        <span class="brand-mark">PART 1</span>
+        <div class="brand-text">
+          <span class="brand-title">Kanji Dasar</span>
+          <span class="brand-sub">N5 · Latihan Mandiri</span>
+        </div>
+      </div>
+
+      <nav class="tab-nav" id="tab-nav">
+        <button class="tab-btn is-active" data-tab="kartu">Kartu Kilat</button>
+        <button class="tab-btn" data-tab="daftar">Daftar Kosakata</button>
+        <button class="tab-btn" data-tab="kuis">Latihan Soal</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- ============ TAB 1: KARTU KILAT ============ -->
+    <section class="tab-panel is-active" id="panel-kartu">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">01 · KARTU KILAT</p>
+          <h1>Latihan Flashcard</h1>
+        </div>
+        <div class="deck-meta">
+          <span id="card-counter">1 / --</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="card-progress"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-stage">
+        <button class="stage-nav" id="btn-prev" aria-label="Kartu sebelumnya">‹</button>
+
+        <div class="flashcard" id="flashcard" tabindex="0">
+          <div class="flashcard-inner" id="flashcard-inner">
+            <div class="flashcard-face flashcard-front">
+              <span class="kanji-big" id="fc-kanji">--</span>
+            </div>
+            <div class="flashcard-face flashcard-back">
+              <span class="furigana-big" id="fc-furigana">--</span>
+              <span class="arti-line" id="fc-arti">--</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="stage-nav" id="btn-next" aria-label="Kartu berikutnya">›</button>
+      </div>
+
+      <div class="deck-controls">
+        <button class="ghost-btn" id="btn-shuffle">
+          <span>⤭</span> Acak Kartu
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ TAB 2: DAFTAR KOSAKATA ============ -->
+    <section class="tab-panel" id="panel-daftar">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">02 · DAFTAR KOSAKATA</p>
+          <h1>Semua Kata PART 1</h1>
+        </div>
+      </div>
+
+      <div class="search-row">
+        <input type="text" id="search-input" placeholder="Cari kanji, furigana, atau arti...">
+      </div>
+
+      <div class="vocab-list" id="vocab-list">
+        <!-- Diisi secara dinamis via js/script.js -->
+      </div>
+    </section>
+
+    <!-- ============ TAB 3: LATIHAN SOAL ============ -->
+    <section class="tab-panel" id="panel-kuis">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">03 · LATIHAN SOAL</p>
+
+          <h1>Uji Cara Baca Kanji</h1>
+        </div>
+        <span class="quiz-progress" id="quiz-progress">Soal 1</span>
+      </div>
+
+      <div class="quiz-box">
+        <p class="quiz-instruction">Pilih cara baca (furigana) yang tepat:</p>
+        <span class="quiz-kanji" id="quiz-kanji">--</span>
+
+        <div class="quiz-options" id="quiz-options">
+          <!-- Diisi secara dinamis via js/script.js -->
+        </div>
+
+        <button class="ghost-btn" id="quiz-next" style="display:none;">Soal Berikutnya →</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>PART 1 · Memuat data dari <code>kode/kosakata.json</code></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

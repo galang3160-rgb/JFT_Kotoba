@@ -1,0 +1,614 @@
+/* =========================================================
+   KOTOBA DAYU — Clean White & Soft Purple Theme
+   Dominan putih bersih, aksen ungu lembut & tipografi sangat jelas
+========================================================= */
+
+:root {
+  --bg-main:       #faf9fe;
+  --card-bg:       #ffffff;
+  --text-main:     #1e1b2e;
+  --text-muted:    #6e6a82;
+  --border-color:  #ea9eb;
+  
+  /* Aksen Ungu */
+  --purple-primary: #7c3aed;
+  --purple-light:   #f3e8ff;
+  --purple-soft:    #a855f7;
+  --purple-dark:    #5b21b6;
+  
+  /* Indikator Status */
+  --success-bg:     #dcfce7;
+  --success-color:  #166534;
+  --error-bg:       #fee2e2;
+  --error-color:    #991b1b;
+
+  /* Font - Mudah Dibaca & Jelas */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-jp:   'Noto Sans JP', sans-serif;
+
+  --radius-card: 20px;
+  --radius-btn:  12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---------- Animasi Background (Glowing Orbs) ---------- */
+.bg-animation {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  animation: floatOrb 12s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+  width: 320px;
+  height: 320px;
+  background: #c084fc;
+  top: -50px;
+  left: -50px;
+}
+
+.orb-2 {
+  width: 380px;
+  height: 380px;
+  background: #e9d5ff;
+  bottom: -100px;
+  right: -50px;
+  animation-delay: -6s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 40px) scale(1.08); }
+  100% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* Watermark Kanji */
+.stamp {
+  position: fixed;
+  top: 20px;
+  right: -10px;
+  font-family: var(--font-jp);
+  font-size: 240px;
+  font-weight: 700;
+  color: var(--purple-primary);
+  opacity: 0.03;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* ---------- Header & Navigasi ---------- */
+.site-header {
+  padding: 24px 20px 0;
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-back {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--purple-primary);
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: var(--radius-btn);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+  background: var(--purple-light);
+}
+
+.brand-mark {
+  font-family: var(--font-jp);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--purple-primary);
+  border: 1.5px solid var(--purple-light);
+  border-radius: 10px;
+  padding: 4px 10px;
+  background: var(--purple-light);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.brand-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.tab-nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tab-btn {
+  appearance: none;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 12px 16px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 3px;
+  background: var(--purple-primary);
+  border-radius: 3px 3px 0 0;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.tab-btn.is-active {
+  color: var(--purple-primary);
+}
+
+.tab-btn.is-active::after {
+  transform: scaleX(1);
+}
+
+.tab-btn:hover {
+  color: var(--purple-primary);
+}
+
+/* ---------- Layout Main ---------- */
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.is-active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--purple-primary);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.panel-head h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* ---------- Flashcard Section ---------- */
+.deck-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.progress-track {
+  width: 110px;
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--purple-primary);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.card-stage {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stage-nav {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--purple-primary);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.stage-nav:hover {
+  background: var(--purple-light);
+  border-color: var(--purple-soft);
+  transform: scale(1.05);
+}
+
+.flashcard {
+  flex: 1;
+  height: 280px;
+  max-width: 460px;
+  margin: 0 auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0.1, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flashcard.is-flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+.kanji-big {
+  font-family: var(--font-jp);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.furigana-big {
+  font-family: var(--font-jp);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--purple-primary);
+}
+
+.arti-line {
+  font-size: 18px;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Animasi Slide saat Ganti Kartu */
+.slide-out-left {
+  animation: slideOutLeft 0.2s forwards ease-in;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.2s forwards ease-out;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.2s forwards ease-in;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.2s forwards ease-out;
+}
+
+@keyframes slideOutLeft {
+  to { opacity: 0; transform: translateX(-40px); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideOutRight {
+  to { opacity: 0; transform: translateX(40px); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.deck-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.ghost-btn {
+  appearance: none;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-btn);
+  padding: 12px 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.ghost-btn:hover {
+  border-color: var(--purple-soft);
+  color: var(--purple-primary);
+  background: var(--purple-light);
+}
+
+/* ---------- Daftar Kosakata ---------- */
+.search-row {
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search-input:focus {
+  border-color: var(--purple-soft);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+}
+
+.vocab-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vocab-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  transition: all 0.2s ease;
+}
+
+.vocab-row:hover {
+  border-color: var(--purple-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.05);
+}
+
+.vocab-kj {
+  display: flex;
+  flex-direction: column;
+  min-width: 90px;
+}
+
+.vocab-kj .kanji {
+  font-family: var(--font-jp);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.vocab-kj .furigana {
+  font-family: var(--font-jp);
+  font-size: 13px;
+  color: var(--purple-primary);
+  font-weight: 600;
+}
+
+.vocab-arti {
+  flex: 1;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.vocab-arti .romaji {
+  display: block;
+  font-size: 12px;
+  color: var(--purple-soft);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* ---------- Latihan Soal ---------- */
+.quiz-progress {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple-primary);
+  background: var(--purple-light);
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.quiz-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.quiz-instruction {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.quiz-kanji {
+  font-family: var(--font-jp);
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.quiz-opt {
+  appearance: none;
+  border: 1px solid var(--border-color);
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-jp);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: var(--radius-btn);
+  padding: 18px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-opt:hover {
+  border-color: var(--purple-soft);
+  background: var(--purple-light);
+}
+
+.quiz-opt.correct {
+  background: var(--success-bg);
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.quiz-opt.wrong {
+  background: var(--error-bg);
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 24px 20px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 560px) {
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+  .flashcard {
+    height: 250px;
+  }
+  .kanji-big {
+    font-size: 56px;
+  }
+}
