@@ -1,0 +1,218 @@
+/* =========================================================
+   THEME SETUP: UNGU DOMINAN & PUTIH
+========================================================= */
+:root {
+  --bg-dark-purple:   #0F081D;
+  --purple-main:      #6D28D9;
+  --purple-light:     #8B5CF6;
+  --purple-glow:      rgba(139, 92, 246, 0.4);
+  
+  --text-white:       #FFFFFF;
+  --text-muted:       #C4B5FD;
+  --card-bg:          rgba(255, 255, 255, 0.05);
+  --card-border:      rgba(255, 255, 255, 0.12);
+
+  --font-title: 'Shippori Mincho', serif;
+  --font-body:  'Inter', sans-serif;
+  --font-jp:    'Noto Sans JP', sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark-purple);
+  color: var(--text-white);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+
+  /* Transisi Fade-In Awal */
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.page-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* BACKGROUND AMBIENT GLOW */
+.bg-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.orb-1 {
+  width: 450px;
+  height: 450px;
+  background: var(--purple-main);
+  top: -100px;
+  left: -100px;
+  opacity: 0.5;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--purple-light);
+  bottom: -150px;
+  right: -100px;
+  opacity: 0.35;
+}
+
+/* WATERMARK KANJI */
+.stamp-kanji {
+  position: absolute;
+  font-family: var(--font-title);
+  font-size: 32vw;
+  color: #FFFFFF;
+  opacity: 0.02;
+  font-weight: 800;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* MAIN CONTAINER */
+.welcome-container {
+  position: relative;
+  z-index: 10;
+  max-width: 640px;
+  text-align: center;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(20px);
+  padding: 56px 40px;
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* BADGE TAG */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: var(--text-white);
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.badge-icon {
+  font-family: var(--font-jp);
+  color: var(--text-muted);
+}
+
+/* JUDUL UTAMA */
+.main-title {
+  font-family: var(--font-title);
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--text-white);
+}
+
+.title-highlight {
+  color: var(--purple-light);
+  background: linear-gradient(135deg, #A78BFA, #DDD6FE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DESKRIPSI */
+.main-description {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+/* TOMBOL START (HREF) */
+.action-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  color: var(--bg-dark-purple);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 18px 42px;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 8px 30px var(--purple-glow);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn-start:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(139, 92, 246, 0.6);
+  background: #F3E8FF;
+}
+
+.btn-start:hover .arrow-icon {
+  transform: translateX(6px);
+}
+
+.btn-start:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .welcome-container {
+    padding: 40px 24px;
+  }
+  
+  .main-title {
+    font-size: 32px;
+  }
+  
+  .main-description {
+    font-size: 14px;
+  }
+  
+  .btn-start {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 28px;
+  }
+}
